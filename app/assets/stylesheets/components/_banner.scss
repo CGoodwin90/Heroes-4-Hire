@@ -5,9 +5,9 @@
 
 .banner-text-box {
   position: absolute;
-  width: 1140px;
+  width: auto;
   top: 50%;
-  left: 55%;
+  left: 30%;
   transform: translate(-50%, -50%);
   color: white;
 
@@ -35,7 +35,7 @@
 // --------------------------------------
 
 .show-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://wallpapersite.com/images/pages/pic_h/16856.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://res.cloudinary.com/dthdgcolp/image/upload/v1634970570/BG_Images/papers.co-be53-thor-ragnarok-red-film-marvel-hero-art-illustration-1920x1080_zvhis2.jpg);
   background-attachment: fixed; /* keeps the image in the same place when scrolling */
   background-size: cover; /* shows the whole image/background */
   background-position: center;
@@ -110,9 +110,9 @@
     line-height: 40px;
     letter-spacing: 2px;
     position: absolute;
-    width: 1140px;
+    width: 100%;
     top: 50%;
-    left: 65%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
   }

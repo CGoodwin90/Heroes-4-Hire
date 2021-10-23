@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_superhero, only: [:new, :create]
+
   def new
-    @superhero = Superhero.find(params[:superhero_id])
     @booking = Booking.new
   end
 
   def create
-    @superhero = Superhero.find(params[:superhero_id])
     @booking = Booking.new(booking_params)
     @booking.superhero = @superhero
     @booking.user = current_user
@@ -24,7 +24,10 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    # Need to redefine this
     params.require(:booking).permit(:date_range)
+  end
+
+  def set_superhero
+    @superhero = Superhero.find(params[:superhero_id])
   end
 end
