@@ -17,10 +17,22 @@
 .footer-links a {
   color: $primary-white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 26px;
   padding: 0px 10px;
 }
 
 .footer-links a:hover {
   opacity: 1;
+}
+
+.footer-links a:hover .fa-linkedin {
+  color: #0866C2;
+}
+
+.footer-links a:hover .fa-github {
+  color: #9401FF;
+}
+
+.footer-links a:hover .fa-envelope {
+  color: #E94436;
 }

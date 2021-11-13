@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :superheroes, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
-    resources :reviews, only: :create
+    resources :reviews, only: [:new, :create]
   end
 
   resources :users, only: [:index, :show, :new, :create]

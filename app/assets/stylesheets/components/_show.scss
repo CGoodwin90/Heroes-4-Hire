@@ -9,7 +9,7 @@
 .show-info {
 
   position: absolute;
-  width: 450px;
+  width: 550px;
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
@@ -18,6 +18,16 @@
   h1 {
     color: $primary-white;
     font-size: 64px;
+  }
+
+  .list-group {
+    padding: 10px;
+  }
+
+  .list-group-item {
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-bottom: 8px;
   }
 }
 

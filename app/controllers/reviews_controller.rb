@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_superhero, only: [:new, :create]
+  # before_action :set_superhero, only: [:new, :create]
 
   def new
     @superhero = Superhero.find(params[:superhero_id])
@@ -10,10 +10,11 @@ class ReviewsController < ApplicationController
     @superhero = Superhero.find(params[:superhero_id])
     @review = Review.new(review_params)
     @review.superhero = @superhero
-      if @review.save
-        redirect_to superhero_path(@superhero)
-      else
-        render 'superheroes/show'
+    @review.user = current_user
+    if @review.save
+      redirect_to superhero_path(@superhero)
+    else
+        render :new
       end
     end
 

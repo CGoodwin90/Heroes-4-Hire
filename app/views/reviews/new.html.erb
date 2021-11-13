@@ -1,0 +1,15 @@
+<div class="form-container">
+  <div class="form-banner">
+    <img src="<%= cl_image_path @superhero.photo, crop: :fill %>" alt="">
+
+    <div class="form-info py-4">
+      <h3>Leave a review for <%= @superhero.name %></h3>
+      <%= simple_form_for [ @superhero, @review ] do |form| %>
+        <%= form.input :content, placeholder: "What's the verdict?", label: false %>
+        <%= form.submit "Submit review for #{@superhero.name}", class: "btn btn-solid btn-lg btn-block mt-5" %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+<%= render 'shared/footer' %>
