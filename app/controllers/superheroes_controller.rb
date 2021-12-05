@@ -20,7 +20,7 @@ class SuperheroesController < ApplicationController
       [{
         lat: @superhero.latitude,
         lng: @superhero.longitude,
-        image_url: '/assets/map-icon.png'
+        image_url: helpers.asset_url('map-icon.png')
       }]
   end
 
