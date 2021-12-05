@@ -13,7 +13,7 @@
           <% end %>
         </ul>
         <a href="#location-map" class="map-link"><p class="mb-5"><i class="fas fa-map-marker-alt mr-2", style="color: #e62328;"></i><%= @superhero.location %></p></a>
-        <div>
+        <div class="show-btns">
           <%= link_to 'Back to Heroes', superheroes_path, class: "btn-ghost"  %>
           <%= link_to 'Leave a review!', new_superhero_review_path(@superhero), class: "btn-solid ml-3"  %>
           <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero), class: "btn-solid ml-3" %>
@@ -22,17 +22,19 @@
 </div>
 
 <div class="container-map" id="location-map">
-  <h1 style="padding-left: 140px;">Location:</h1>
-  <p style="padding-left: 140px; font-size: 30px;"><%= @superhero.location %></p>
-  <div class="inner-container">
-    <div
-      id="map"
-      style="width: 80%;
-      border-radius: 8px;
-      height: 60vh"
-      data-markers="<%= @marker.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
+  <div class="map-cont">
+    <h1>Location:</h1>
+    <p style="font-size: 30px;"><%= @superhero.location %></p>
+    <div class="inner-container">
+      <div
+        id="map"
+        style="width: 100%;
+        border-radius: 8px;
+        height: 60vh"
+        data-markers="<%= @marker.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
   </div>
 </div>
 <%= render 'shared/footer' %>

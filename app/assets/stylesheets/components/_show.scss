@@ -4,10 +4,14 @@
   background-color: $primary-white;
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 600px) {
+    height: 120vh;
+    top: 70%;
+  }
 }
 
 .show-info {
-
   position: absolute;
   width: 550px;
   top: 50%;
@@ -18,16 +22,30 @@
   h1 {
     color: $primary-white;
     font-size: 64px;
-  }
 
-  .list-group {
-    padding: 10px;
+    @media (max-width: 600px) {
+      font-size: 42px;
+    }
   }
 
   .list-group-item {
     background-color: transparent;
     border: 2px solid #fff;
     margin-bottom: 8px;
+  }
+
+  @media (max-width: 1000px) {
+    left: 50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 400px;
+    top: 70%;
+  }
+
+  @media (max-width: 450px) {
+    width: 300px;
+    text-align: center;
   }
 }
 
@@ -38,3 +56,28 @@
  white-space: nowrap;
  text-overflow: ellipsis;
 }
+
+.show-page {
+  width: 100%;
+}
+
+.map-cont {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .show-btns {
+    max-width: fit-content;
+    margin: 0 auto;
+  
+    .btn-solid {
+      display: block;
+      width: fit-content;
+      margin: 16px 0 !important;
+    }
+  }
+}
+
+
+    

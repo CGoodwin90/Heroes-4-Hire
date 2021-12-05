@@ -4,6 +4,7 @@
   padding: 8px 24px;
   border-radius: 4px;
   transition: opacity 0.3s ease;
+  width: fit-content;
   &:hover {
     //transform: translateY(-2px);
     box-shadow: 0 4px 4px rgba(#212629, 0.1);
@@ -37,6 +38,18 @@
   &::after {
     transform: scaleX(1.5) scaleY(1.6);
     opacity: 0;
+  }
+}
+
+form#new_review .btn-solid {
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    margin: 0 !important;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.75rem;
   }
 }
 

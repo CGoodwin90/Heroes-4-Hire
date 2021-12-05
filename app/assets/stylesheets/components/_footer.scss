@@ -36,3 +36,11 @@
 .footer-links a:hover .fa-envelope {
   color: #E94436;
 }
+
+.footer-copyright {
+  margin-left: 6%;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+}

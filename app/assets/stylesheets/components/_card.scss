@@ -6,9 +6,27 @@
   width: 240px;
   border-radius: 4px;
   transition: transform .3s;
+  margin: 0 8px;
 
   &:hover {
       transform: translateY(-1.1rem) scale(1.03); //moves up. transition goes in parent element
+  }
+}
+
+.show-page .card-trip {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .homepage .card-trip:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .homepage .card-trip:nth-last-child(2) {
+    display: none;
   }
 }
 
@@ -48,24 +66,28 @@
 
 .card-testimonial {
   overflow: hidden;
-  height: 280px;
+  height: auto;
   width: 50%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  // align-items: center;
   color: $primary-dark;
-  position: absolute;
-  right: 100px;
-  top: 105px;
+  // position: absolute;
+  // right: 100px;
+  // top: 105px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   img {
     width: 100%;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    // background-position: center;
+    // background-attachment: fixed;
     opacity: 0.9;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
@@ -73,9 +95,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  padding: 8px;
 
   a {
     color: black;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -83,6 +118,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  text-align: center;
 
   .number {
     color: $primary-red;

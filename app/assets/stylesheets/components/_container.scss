@@ -10,8 +10,21 @@
 
 .container-testimonial {
   margin-top: 88px;
-  height: 30vh;
+  height: auto;
   position: relative;
+  display: flex;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+.container.homepage-testimonial {
+  height: auto;
+}
+
+.homepage-user .container {
+  padding: 0;
 }
 
 .container-show {
@@ -28,11 +41,20 @@
     color: white;
     padding-top: 64px;
     font-size: 48px;
+
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
   }
 
   p {
     color: white;
   }
+
+  @media (max-width: 600px) {
+    padding: 0 16px;
+  }
+  
 }
 
 .inner-container {
@@ -40,4 +62,32 @@
   display: flex;
   justify-content: center;
   margin-top: 32px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  z-index: 0;
+}
+
+.h4h-login {
+  max-width: 600px;
+  margin: 60px auto;
+  border: 2px solid #212629;
+  padding: 20px;
+
+  @media (max-width: 610px) {
+    border: none;
+  }
+
+  h2 {
+    @media (max-width: 450px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .btn-search {
+    @media (max-width: 450px) {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
 }

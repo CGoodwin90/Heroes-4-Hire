@@ -5,11 +5,22 @@
 
 .banner-text-box {
   position: absolute;
-  width: auto;
-  top: 30%;
+  width: fit-content;
+  top: 23%;
   left: 30%;
   transform: translate(-50%, -50%);
   color: white;
+
+  @media (max-width: 1000px) {
+    top: 15%;
+    left: 35%;
+  }
+
+  @media (max-width: 550px) {
+    top: 24%;
+    left: 54%;
+    text-align: center;
+  }
 
   .banner-buttons {
     color: $primary-red;
@@ -17,19 +28,65 @@
   }
 }
 
+.homepage-user .banner-text-box {
+  position: absolute;
+  width: fit-content;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+  @media (max-width: 1000px) {
+    top: 40%;
+    left: 35%;
+  }
+
+  @media (max-width: 550px) {
+    top: 45%;
+    left: 55%;
+    text-align: center;
+  }
+}
+
+
 .banner-text-box h1 {
   font-size: 64px;
   word-spacing: 4px;
   letter-spacing: 1px;
   font-weight: bold;
+
+  @media (max-width: 1000px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 32px;
+  }
+
 }
 
 .banner-testimonial {
   background-position: center;
   background-color: $primary-dark;
-  height: 30vh;
-  padding: 54px;
+  height: auto;
+  padding: 24px;
   color: $primary-white;
+  width: 50%;
+  text-align: center;
+
+    h4 {
+      margin-top: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+  .homepage .banner-testimonial {
+    width: 100%;
+  }
 }
 
 // --------------------------------------
@@ -40,23 +97,39 @@
   background-size: cover; /* shows the whole image/background */
   background-position: center;
   height: 45vh; /* fill this header with 100% of the viewpoint. */
-  background-attachment: fixed;
 }
 
 .show-text {
   position: absolute;
-  width: 1140px;
-  top: 30%;
-  left: 55%;
+  width: fit-content;
+  top: 33%;
+  left: 24%;
   transform: translate(-50%, -50%);
   color: white;
 
   h1 {
     font-size: 54px;
+
+    @media (max-width: 700px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 32px;
+    }
   }
 
   p {
     font-size: 16px
+  }
+
+  @media (max-width: 1030px) {
+    left: 54%;
+  }
+
+  @media (max-width: 700px) {
+    top: 35%;
+    left: 50%;
   }
 }
 
@@ -69,7 +142,7 @@
 }
 
 .homepage-howitworks {
-  height: 30vh;
+  height: auto;
   position: sticky;
   background-color: #1a1a1a;
   color: white;
@@ -115,9 +188,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+
+    @media (max-width: 600px) {
+      font-size: 40px;
+      padding-left: 4% !important;
+    }
   }
 }
-
+.homepage.col-xl-12, .banner-text-box.col-xl-12 {
+  padding: 0;
+}
 
 
 
