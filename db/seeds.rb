@@ -12,6 +12,12 @@ users_attributes = [
     remote_photo_url: "https://res.cloudinary.com/dthdgcolp/image/upload/v1567146236/wkzmvrynwaujjkozk5y6.jpg"
   },
   {
+    name:         'User',
+    email:        'user@user.com',
+    password:     123456,
+    remote_photo_url: "https://res.cloudinary.com/dthdgcolp/image/upload/v1568343725/qfo02lvrty4qi0grsmfr.jpg"
+  },
+  {
     name:         'Stan',
     email:        'click@power.com',
     password:     123456,
